@@ -109,6 +109,8 @@ require_once 'config/connect.php';
       <button class= "add-book__btn" button id= "open-modal-btn">Добавить новую книгу</button>
     </section>   
 
+    <a href="employees.php">Сотрудники</a>
+
 
 
 
