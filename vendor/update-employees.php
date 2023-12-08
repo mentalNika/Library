@@ -3,8 +3,8 @@
 require_once '../config/connect.php';
 
 $id = $_POST['id'];
-$name = $_POST['name'];
 $lastname = $_POST['lastname'];
+$name = $_POST['name'];
 $surname = $_POST['surname'];
 $position = $_POST['position'];
 

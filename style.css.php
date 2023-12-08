@@ -365,7 +365,7 @@ img {
   outline-offset: 15px;
 }
 
-/* ИЗМЕНИТЬ ОПИСАНИЕ */
+/* ИЗМЕНИТЬ ОПИСАНИЕ КНИГИ*/
 
 .change-description {
   padding: 35px 0 35px 0;
@@ -418,4 +418,34 @@ img {
 .btn--update:hover {
   background-color: #999967;
   transition: background-color 0.5s;
+}
+
+
+/* СОТРУДНИКИ */
+
+.employees {
+  padding: 0 35px 0 35px;
+  background-color: #F9F1BD;
+  border-top: 5px #000 solid;
+  border-bottom: 5px #000 solid;
+}
+
+.employees-table__title {
+  padding: 10px 20px;
+  font-size: 56px;
+  font-weight: 600;
+  background-color: #dfd7a9;
+  border: 2px #ddd18ecb solid;
+}
+
+.employees-table__text {
+  padding: 5px 10px;
+  font-size: 40px;
+  font-weight: 600;
+  background-color: rgb(235, 225, 169);
+  border: 2px #dfd7a9 solid;
+}
+
+.btn--employee-update {
+
 }

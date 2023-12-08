@@ -13,15 +13,20 @@ require_once 'config/connect.php';
   <link rel="stylesheet" href="style.css.php" />
 </head>
 <body class= "page">
-  <header class= "header">
-    <h1 class = "header__title">Сотрудники</h1>
+<header class= "header">
+<a href="index.php">
+      <h1 class = "header__title">{Библиотечный фонд}</h1>
+    </a>
   </header>
-  <table>
+
+  <main class= "employees">
+  <h2 class= "books__title">Сотрудники</h2>
+  <table class= "employees-table">
         <tr>
-            <th>Номер</th>
-            <th>Фамилия</th>
-            <th>Имя</th>
-            <th>Отчество</th>
+            <th class= "employees-table__title">Номер</th>
+            <th class= "employees-table__title">Фамилия</th>
+            <th class= "employees-table__title">Имя</th>
+            <th class= "employees-table__title">Отчество</th>
         </tr>
 
         <?php
@@ -49,12 +54,12 @@ require_once 'config/connect.php';
             foreach ($employees as $employee) {
                 ?>
                     <tr>
-                        <td><?= $employee[0] ?></td>
-                        <td><?= $employee[1] ?></td>
-                        <td><?= $employee[3] ?></td>
-                        <td><?= $employee[2] ?></td>
-                        <td><a href="update-employees.php?id=<?= $employee[0] ?>">Изменить</a></td>
-                        <td><a style="color: red;" href="vendor/delete-employees.php?id=<?= $employee[0] ?>">Удалить</a></td>
+                        <td class= "employees-table__text"><?= $employee[0] ?></td>
+                        <td class= "employees-table__text"><?= $employee[1] ?></td>
+                        <td class= "employees-table__text"><?= $employee[2] ?></td>
+                        <td class= "employees-table__text"><?= $employee[3] ?></td>
+                        <td><a class= "btn btn--employee-add" href="update-employees.php?id=<?= $employee[0] ?>">Изменить</a></td>
+                        <td><a class= "btn btn--employee-delete" href="vendor/delete-employees.php?id=<?= $employee[0] ?>">Удалить</a></td>
                     </tr>
                 <?php
             }

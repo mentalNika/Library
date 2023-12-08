@@ -65,9 +65,6 @@ require_once 'config/connect.php';
       <?php
   } 
 ?>  
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
 
         <div class="modal" id= "my-modal">
           <div class="modal__box">
