@@ -60,6 +60,8 @@ require_once 'config/connect.php';
             }
         ?>
     </table>
+
+    <button class= "add-book__btn" button id= "open-modal-btn">Добавить сотрудника</button>
     
     <div class="modal" id= "my-modal">
           <div class="modal__box">
@@ -81,21 +83,49 @@ require_once 'config/connect.php';
               </g>
             </svg>
             </button>
-          <h2 class ="modal__title">{Добавить новую книгу}</h2>
-          <form action="vendor/create.php" method="post">
-            <p class ="modal__text">Изображение</p>
-            <input class ="modal__input" type="text" name= "pic" placeholder= "Введите url адрес изображения">
-            <p class ="modal__text">Название</p>
-            <input class ="modal__input"type="text" name= "title" placeholder= "Введите название книги">
-            <p class ="modal__text">Автор</p>
-            <input class ="modal__input" type="text" name= "author" placeholder= "Введите автора книги">
-            <p class ="modal__text">Количество страниц</p>
-            <input class ="modal__input" type="number" name= "pages" placeholder= "Введите количество страниц">
+          <h2 class ="modal__title">{Добавить Сотрудника}</h2>
+          <form action="vendor/create-employees.php" method="post">
+            <p class ="modal__text">Фамилия</p>
+            <input class ="modal__input" type="text" name= "lastname" placeholder= "Введите фамилию">
+            <p class ="modal__text">Имя</p>
+            <input class ="modal__input"type="text" name= "name" placeholder= "Введите Имя">
+            <p class ="modal__text">Отчество</p>
+            <input class ="modal__input" type="text" name= "surname" placeholder= "Введите Отчество">
+            <p class ="modal__text">Должность</p>
+            <input class ="modal__input" type="text" name= "position" placeholder= "Введите должность">
             <button class ="btn btn--add" type= "submit">Добавить</button>
         </form>
           </div>
       </div> 
   </main>
   
+    <!-- javascript -->
+    <script type='text/javascript'>
+    document
+    .getElementById("open-modal-btn")
+    .addEventListener("click", function () {
+      document.getElementById("my-modal").classList.add("open");
+    });
+
+    document
+    .getElementById("close-my-modal-btn")
+    .addEventListener("click", function () {
+      document.getElementById("my-modal").classList.remove("open");
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key ===  "Escape") {
+        document.getElementById("my-modal").classList.remove("open");
+      }
+    });
+
+    document.querySelector("#my-modal .modal__box").addEventListener ('click', event => {
+      event._isClickWithInModal = true;
+    });
+    document.getElementById("my-modal").addEventListener('click', event => {
+      if (event._isClickWithInModal) return;
+      event.currentTarget.classList.remove('open');
+    });
+</script>
 </body>
 </html>
