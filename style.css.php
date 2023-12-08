@@ -424,10 +424,14 @@ img {
 /* СОТРУДНИКИ */
 
 .employees {
-  padding: 0 35px 0 35px;
+  padding: 35px;
   background-color: #F9F1BD;
   border-top: 5px #000 solid;
   border-bottom: 5px #000 solid;
+}
+
+.employees-table {
+  margin-bottom: 100px;
 }
 
 .employees-table__title {
@@ -447,5 +451,21 @@ img {
 }
 
 .btn--employee-update {
+  background-color: #BABA7C;
+}
 
+.btn--employee-update:hover {
+  background-color: #999967;
+  transition: background-color 0.5s;
+}
+
+.btn--employee-delete {
+  position: relative;
+  background-color: #F28F8C;
+  text-align: center;
+}
+
+.btn--employee-delete:hover {
+  background-color: #dd6d6b;
+  transition: background-color 0.5s;
 }

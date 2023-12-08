@@ -23,10 +23,11 @@ require_once 'config/connect.php';
   <h2 class= "books__title">Сотрудники</h2>
   <table class= "employees-table">
         <tr>
-            <th class= "employees-table__title">Номер</th>
+            <!-- <th class= "employees-table__title">Номер</th> -->
             <th class= "employees-table__title">Фамилия</th>
             <th class= "employees-table__title">Имя</th>
             <th class= "employees-table__title">Отчество</th>
+            <th class= "employees-table__title">Должность</th>
         </tr>
 
         <?php
@@ -54,11 +55,12 @@ require_once 'config/connect.php';
             foreach ($employees as $employee) {
                 ?>
                     <tr>
-                        <td class= "employees-table__text"><?= $employee[0] ?></td>
+                        <!-- <td class= "employees-table__text"><?= $employee[0] ?></td> -->
                         <td class= "employees-table__text"><?= $employee[1] ?></td>
                         <td class= "employees-table__text"><?= $employee[2] ?></td>
                         <td class= "employees-table__text"><?= $employee[3] ?></td>
-                        <td><a class= "btn btn--employee-add" href="update-employees.php?id=<?= $employee[0] ?>">Изменить</a></td>
+                        <td class= "employees-table__text"><?= $employee[4] ?></td>
+                        <td><a class= "btn btn--employee-update" href="update-employees.php?id=<?= $employee[0] ?>">Изменить</a></td>
                         <td><a class= "btn btn--employee-delete" href="vendor/delete-employees.php?id=<?= $employee[0] ?>">Удалить</a></td>
                     </tr>
                 <?php
